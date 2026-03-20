@@ -25,15 +25,15 @@ NMF decomposes a non-negative data matrix ( V ) into two lower-rank matrices ( W
 
 We solve the optimization problem:
 
-[
-\min_{W, H \ge 0} |V - WH|_F
-]
+$$
+\min_{W,H \ge 0} \|V - WH\|_F
+$$
 
 where:
 
-* ( V \in \mathbb{R}^{m \times n} ) is the data matrix
-* ( W \in \mathbb{R}^{m \times r} ) contains basis components
-* ( H \in \mathbb{R}^{r \times n} ) contains coefficients
+* $V \in \mathbb{R}^{m \times n}$ is the data matrix  
+* $W \in \mathbb{R}^{m \times r}$ contains basis components  
+* $H \in \mathbb{R}^{r \times n}$ contains coefficients  
 
 Because this problem is not jointly convex, we use **alternating minimization**:
 
